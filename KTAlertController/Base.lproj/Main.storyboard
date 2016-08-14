@@ -16,11 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3A-q3-Fng">
+                                <rect key="frame" x="285" y="70" width="30" height="30"/>
+                                <state key="normal" title="弹出"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I9x-FL-ECv"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P3A-q3-Fng" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6tB-fI-gFj"/>
+                            <constraint firstItem="P3A-q3-Fng" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="fCW-yr-vzC"/>
+                            <constraint firstItem="P3A-q3-Fng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zIM-Gs-5i5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6tB-fI-gFj"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="482" y="360"/>
         </scene>
     </scenes>
 </document>

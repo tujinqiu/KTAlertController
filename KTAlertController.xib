@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KTAlertController">
             <connections>
+                <outlet property="backView" destination="xUe-ki-785" id="hM7-j0-h8k"/>
                 <outlet property="button" destination="IxN-io-qET" id="XUa-bY-w5y"/>
                 <outlet property="cancelButton" destination="mUI-1p-jx0" id="xg0-by-vv2"/>
                 <outlet property="cancelButtonLeftConstraint" destination="UtW-Y5-qaQ" id="FQi-pH-87H"/>
@@ -18,10 +19,14 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" alpha="0.29999999999999999" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUe-ki-785" userLabel="backView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1m-bc-205" userLabel="contentView">
                     <rect key="frame" x="165" y="245" width="270" height="110"/>
                     <subviews>
@@ -38,6 +43,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUI-1p-jx0" userLabel="cancelButton">
                                     <rect key="frame" x="135" y="0.0" width="135" height="44"/>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="tapButton:" destination="-1" eventType="touchUpInside" id="51b-kG-g77"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-io-qET">
                                     <rect key="frame" x="0.0" y="0.0" width="135" height="44"/>
@@ -115,11 +123,15 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="xUe-ki-785" secondAttribute="trailing" id="EXj-lb-RsY"/>
+                <constraint firstItem="xUe-ki-785" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aFS-er-2C7"/>
                 <constraint firstItem="p1m-bc-205" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="e3b-hx-SNN"/>
+                <constraint firstItem="xUe-ki-785" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eTj-47-EaW"/>
                 <constraint firstItem="p1m-bc-205" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yAG-c5-xeb"/>
+                <constraint firstAttribute="bottom" secondItem="xUe-ki-785" secondAttribute="bottom" id="zRb-se-H3I"/>
             </constraints>
+            <point key="canvasLocation" x="315" y="347"/>
         </view>
     </objects>
 </document>

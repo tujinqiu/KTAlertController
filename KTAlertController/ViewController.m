@@ -18,18 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    KTAlertController *alert = [KTAlertController alertControllerWithTitle:@"这是一个alert" description:@"又如何？" cancel:@"取消" button:@"好的" action:^{
-        NSLog(@"tap button");
-    }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self presentViewController:alert animated:YES completion:nil];
-    });
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)tapButton:(UIButton *)sender {
+    KTAlertController *alert = [KTAlertController alertControllerWithTitle:@"这是一个alert" description:@"又如何？" cancel:@"取消" button:@"好的" action:^{
+        NSLog(@"tap button");
+    }];
+    alert.animationType = sender.tag == 1 ? KTAlertControllerAnimationTypeUpDown : KTAlertControllerAnimationTypeCenterShow;
+    [self presentViewController:alert animated:YES completion:nil];
+    if (sender.tag == 1) {
+        sender.tag = 2;
+    }
+    else {
+        sender.tag = 1;
+    }
 }
 
 @end

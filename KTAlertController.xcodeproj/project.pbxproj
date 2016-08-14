@@ -17,6 +17,8 @@
 		0A5109011D6010BF00A5A535 /* KTAlertControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5109001D6010BF00A5A535 /* KTAlertControllerUITests.m */; };
 		0AF4484F1D60509F00DFCB4B /* KTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4484D1D60509F00DFCB4B /* KTAlertController.m */; };
 		0AF448501D60509F00DFCB4B /* KTAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */; };
+		0AF448531D60645A00DFCB4B /* KTCenterAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF448521D60645A00DFCB4B /* KTCenterAnimationController.m */; };
+		0AF448561D60647900DFCB4B /* KTUpDownAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF448551D60647900DFCB4B /* KTUpDownAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		0AF4484C1D60509F00DFCB4B /* KTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAlertController.h; sourceTree = "<group>"; };
 		0AF4484D1D60509F00DFCB4B /* KTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAlertController.m; sourceTree = "<group>"; };
 		0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTAlertController.xib; sourceTree = "<group>"; };
+		0AF448511D60645A00DFCB4B /* KTCenterAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCenterAnimationController.h; sourceTree = "<group>"; };
+		0AF448521D60645A00DFCB4B /* KTCenterAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCenterAnimationController.m; sourceTree = "<group>"; };
+		0AF448541D60647900DFCB4B /* KTUpDownAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTUpDownAnimationController.h; sourceTree = "<group>"; };
+		0AF448551D60647900DFCB4B /* KTUpDownAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTUpDownAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				0AF4484C1D60509F00DFCB4B /* KTAlertController.h */,
 				0AF4484D1D60509F00DFCB4B /* KTAlertController.m */,
 				0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */,
+				0AF448511D60645A00DFCB4B /* KTCenterAnimationController.h */,
+				0AF448521D60645A00DFCB4B /* KTCenterAnimationController.m */,
+				0AF448541D60647900DFCB4B /* KTUpDownAnimationController.h */,
+				0AF448551D60647900DFCB4B /* KTUpDownAnimationController.m */,
 				0A5108DA1D6010BF00A5A535 /* KTAlertController */,
 				0A5108F41D6010BF00A5A535 /* KTAlertControllerTests */,
 				0A5108FF1D6010BF00A5A535 /* KTAlertControllerUITests */,
@@ -280,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF448561D60647900DFCB4B /* KTUpDownAnimationController.m in Sources */,
 				0A5108E31D6010BF00A5A535 /* ViewController.m in Sources */,
 				0A5108E01D6010BF00A5A535 /* AppDelegate.m in Sources */,
 				0A5108DD1D6010BF00A5A535 /* main.m in Sources */,
+				0AF448531D60645A00DFCB4B /* KTCenterAnimationController.m in Sources */,
 				0AF4484F1D60509F00DFCB4B /* KTAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

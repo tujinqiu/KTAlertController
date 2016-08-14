@@ -7,15 +7,16 @@
 //
 
 #import "KTAlertController.h"
+#import "KTCenterAnimationController.h"
+#import "KTUpDownAnimationController.h"
 
-@interface KTAlertController ()
+@interface KTAlertController ()<UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, copy) NSString *titleText;
 @property (nonatomic, copy) NSString *cancelText;
 @property (nonatomic, copy) NSString *buttonText;
 @property (nonatomic, copy) NSString *descriptionText;
 @property (nonatomic, copy) void (^buttonAction)();
-@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -32,6 +33,8 @@
     NSAssert(title.length > 0 || description.length > 0 , @"title和description不能同时为空");
     
     KTAlertController *alert = [[KTAlertController alloc] init];
+    alert.transitioningDelegate = alert;
+    alert.modalPresentationStyle = UIModalPresentationCustom;
     alert.titleText = title;
     alert.descriptionText = description;
     alert.cancelText = cancel ? cancel : @"取消";
@@ -66,6 +69,40 @@
             self.buttonAction();
     }
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark -- UIViewControllerTransitioningDelegate --
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    switch (self.animationType) {
+        case KTAlertControllerAnimationTypeCenterShow:
+            return [[KTCenterAnimationController alloc] init];
+            break;
+            
+        case KTAlertControllerAnimationTypeUpDown:
+            return [[KTUpDownAnimationController alloc] init];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    switch (self.animationType) {
+        case KTAlertControllerAnimationTypeCenterShow:
+            return [[KTCenterAnimationController alloc] init];
+            break;
+            
+        case KTAlertControllerAnimationTypeUpDown:
+            return [[KTUpDownAnimationController alloc] init];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end
