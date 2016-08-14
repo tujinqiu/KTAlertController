@@ -15,6 +15,8 @@
 		0A5108EB1D6010BF00A5A535 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5108E91D6010BF00A5A535 /* LaunchScreen.storyboard */; };
 		0A5108F61D6010BF00A5A535 /* KTAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5108F51D6010BF00A5A535 /* KTAlertControllerTests.m */; };
 		0A5109011D6010BF00A5A535 /* KTAlertControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5109001D6010BF00A5A535 /* KTAlertControllerUITests.m */; };
+		0AF4484F1D60509F00DFCB4B /* KTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4484D1D60509F00DFCB4B /* KTAlertController.m */; };
+		0AF448501D60509F00DFCB4B /* KTAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		0A5108FC1D6010BF00A5A535 /* KTAlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTAlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5109001D6010BF00A5A535 /* KTAlertControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAlertControllerUITests.m; sourceTree = "<group>"; };
 		0A5109021D6010BF00A5A535 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AF4484C1D60509F00DFCB4B /* KTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTAlertController.h; sourceTree = "<group>"; };
+		0AF4484D1D60509F00DFCB4B /* KTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTAlertController.m; sourceTree = "<group>"; };
+		0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KTAlertController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,9 @@
 		0A5108CF1D6010BF00A5A535 = {
 			isa = PBXGroup;
 			children = (
+				0AF4484C1D60509F00DFCB4B /* KTAlertController.h */,
+				0AF4484D1D60509F00DFCB4B /* KTAlertController.m */,
+				0AF4484E1D60509F00DFCB4B /* KTAlertController.xib */,
 				0A5108DA1D6010BF00A5A535 /* KTAlertController */,
 				0A5108F41D6010BF00A5A535 /* KTAlertControllerTests */,
 				0A5108FF1D6010BF00A5A535 /* KTAlertControllerUITests */,
@@ -207,6 +215,7 @@
 				TargetAttributes = {
 					0A5108D71D6010BF00A5A535 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2536D3J6MP;
 					};
 					0A5108F01D6010BF00A5A535 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -244,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5108EB1D6010BF00A5A535 /* LaunchScreen.storyboard in Resources */,
+				0AF448501D60509F00DFCB4B /* KTAlertController.xib in Resources */,
 				0A5108E81D6010BF00A5A535 /* Assets.xcassets in Resources */,
 				0A5108E61D6010BF00A5A535 /* Main.storyboard in Resources */,
 			);
@@ -273,6 +283,7 @@
 				0A5108E31D6010BF00A5A535 /* ViewController.m in Sources */,
 				0A5108E01D6010BF00A5A535 /* AppDelegate.m in Sources */,
 				0A5108DD1D6010BF00A5A535 /* main.m in Sources */,
+				0AF4484F1D60509F00DFCB4B /* KTAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +426,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KTAlertController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.ting.KTAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +440,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = KTAlertController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.ting.KTAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -498,6 +515,7 @@
 				0A5109071D6010BF00A5A535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A5109081D6010BF00A5A535 /* Build configuration list for PBXNativeTarget "KTAlertControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +524,7 @@
 				0A51090A1D6010BF00A5A535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A51090B1D6010BF00A5A535 /* Build configuration list for PBXNativeTarget "KTAlertControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +533,7 @@
 				0A51090D1D6010BF00A5A535 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
